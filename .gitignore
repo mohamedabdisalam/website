@@ -79,6 +79,9 @@ dist
 
 # IDE / Editor
 .idea
+*.iml
+out
+gen
 
 # Service worker
 sw.*

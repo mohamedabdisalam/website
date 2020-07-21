@@ -1,17 +1,19 @@
 export default {
-  mode: 'universal',
+  telemetry: false,
+  components: true,
+  mode: 'spa',
   /*
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Somalis in tech 💻 🐪',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: process.env.npm_package_description || '' // need some SEO here
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
@@ -61,4 +63,4 @@ export default {
      */
     extend(config, ctx) {}
   }
-}
+};
