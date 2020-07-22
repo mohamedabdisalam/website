@@ -83,6 +83,7 @@ export default {
   pwa: {
     meta: {
       name: 'Somalis in tech 💻 🐪',
+      title: 'Somalis in tech 💻 🐪',
       description: 'All things tech 💻 all things Somali 🐪'
     },
     manifest: {
