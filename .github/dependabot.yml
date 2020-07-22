@@ -1,0 +1,51 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    # Raise pull requests for version updates
+    # to github-actions against the `master` branch
+    target-branch: "master"
+    commit-message:
+      # Prefix all commit messages with "github-action"
+      prefix: "github-actions"
+    # Specify labels for github actions pull requests
+    labels:
+      - "github-actions"
+      - "dependencies"
+    # Add assignees
+    assignees:
+      - "abshirahmed"
+    # Add reviewers
+    reviewers:
+      - "somalisintech/engineering"
+      
+  # Maintain dependencies for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    # Raise pull requests for version updates
+    # to npm against the `master` branch
+    target-branch: "master"
+    commit-message:
+      # Prefix all commit messages with "npm"
+      prefix: "npm"
+    # Specify labels for npm pull requests
+    labels:
+      - "npm"
+      - "dependencies"
+    # Add assignees
+    assignees:
+      - "abshirahmed"
+    # Add reviewers
+    reviewers:
+      - "somalisintech/engineering"
