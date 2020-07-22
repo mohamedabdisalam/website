@@ -77,7 +77,7 @@ dist
 # Serverless directories
 .serverless
 
-# IDE / Editor
+# IntelliJ project files
 .idea
 *.iml
 out
@@ -91,3 +91,6 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# Firebase
+firebase-debug.log
