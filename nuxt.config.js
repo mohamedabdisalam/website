@@ -25,7 +25,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['@/assets/styles/scss/global.scss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -61,6 +61,23 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, { isDev, isClient }) {
+      if (isDev && isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        });
+      }
+      // Sets webpack's mode to development if `isDev` is true.
+      if (isDev) {
+        config.mode = 'development';
+      }
+      // optimise chunk
+      if (isClient) {
+        config.optimization.splitChunks.maxSize = 200000;
+      }
+    }
   }
 };
