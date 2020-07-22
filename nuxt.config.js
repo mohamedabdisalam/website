@@ -13,7 +13,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '' // need some SEO here
+        content: 'All things tech 💻 all things Somali 🐪' // need some SEO here
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
@@ -78,6 +78,20 @@ export default {
       if (isClient) {
         config.optimization.splitChunks.maxSize = 200000;
       }
+    }
+  },
+  pwa: {
+    meta: {
+      name: 'Somalis in tech 💻 🐪',
+      description: 'All things tech 💻 all things Somali 🐪'
+    },
+    manifest: {
+      name: 'Somalis in tech 💻 🐪',
+      title: 'Somalis in tech 💻 🐪',
+      description: 'All things tech 💻 all things Somali 🐪',
+      short_name: 'SiT',
+      background_color: '#f8da30',
+      theme_color: '#f8da30'
     }
   }
 };
